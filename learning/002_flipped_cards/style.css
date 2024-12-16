@@ -1,0 +1,38 @@
+.card-container{
+  perspective: 100px;
+  height: 300px;
+  width: 200px;
+}
+
+.card{
+  height: 300px;
+  width: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.30s
+}
+
+.front-card img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 15px;
+}
+
+.back-card{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: pink;
+  border-radius: 15px;
+  background-color: brown;
+  transform: rotateY(180deg);
+}
+
+card-container:hover{
+  transform: rotateY(180deg)
+}

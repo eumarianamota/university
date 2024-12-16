@@ -9,7 +9,7 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d; /*para garantir que o efeito 3d funciona */
-  transition: transformm 0.6s;
+  transition: transform 0.6s;
 }
 
 .card_front, .card_back{
