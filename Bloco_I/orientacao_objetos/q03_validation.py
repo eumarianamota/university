@@ -13,16 +13,16 @@ class bankAccount:
     self.holder = holder
     self.balance = balance
 
-    def deposit(self, amount):
-      if amount > 0:
-        self.balance += amount
-    
-    def withdraw(self, amount):
-      if amount <= balance:
-        self.balance -= amount
-    
-    def __str__(self):
-      return f'BankAccount({self.holder}; {self.balance})'
-    
-    def print_balance(self):
-      print(f'{self.balance}')
+  def deposit(self, amount):
+    if amount > 0:
+      self.balance += amount
+  
+  def withdraw(self, amount):
+    if amount <= self.balance:
+      self.balance -= amount
+  
+  def __str__(self):
+    return f'BankAccount({self.holder}; {self.balance})'
+  
+  def print_balance(self):
+    print(f'{self.balance}')
