@@ -9,7 +9,7 @@
   # turn_off() - altera o estado para "off".
   # print_state() - imprime o estado atual.
 
-class lamp:
+class Lamp:
   def __init__(self, initial_state = False):
     if initial_state: #se você não coloca false ou true, significa que é true 
       self.state = 'on'
@@ -21,6 +21,13 @@ class lamp:
   
   def turn_off(self):
     self.state = 'off'
+  
+  def __str__(self):
+    return f'Lamp is {self.state}'
 
   def print_state(self):
     print(f'Lamp is {self.state}')
+
+
+lampada = Lamp(True)
+print(lampada)

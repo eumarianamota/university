@@ -7,15 +7,27 @@
 # show_queue() - exibe a fila atual.
 
 class Queue:
-  def __init__(self, people):
+  def __init__(self):
     self._people = []
   
   def add_person(self, name):
     self._people.append(name)
+    return self._people
   
   def remove_person(self):
-    self._people.remove(0)
+    self._people.pop(0)
+    return self._people
   
-  def show_queue(self, _people):
-    for peoplee in _people:
-      print(peoplee)
+  def show_queue(self):
+    for person in self._people:
+      print(person)
+
+lista1 = Queue()
+
+print(lista1.add_person('Mariana'))
+print(lista1.add_person('Julia'))
+print(lista1.add_person('Rhuan'))
+print(lista1.add_person('Laisa'))
+print(lista1.add_person('Clarissa'))
+
+print(lista1.show_queue())

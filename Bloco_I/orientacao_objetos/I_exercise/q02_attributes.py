@@ -30,4 +30,9 @@ class lamp:
     self.new_color = color
 
   def print_state(self):
-    print('lamp is {self.state}')
+    print(f'lamp is {self.state}')
+
+
+lampada = lamp('pink', 30, True)
+print(lampada)
+lampada.print_state()

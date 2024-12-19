@@ -11,14 +11,13 @@ class Employee:
   total_employees = 0 # um atributo de classe é definido fora do construtor.
 
   def __init__(self, name, salary):
+    Employee.total_employees += 1
+
     self.name = name 
     self.salary = salary
-    Employee.total_employees += 1
 
   def __str__(self, name):
     return f'{name}'
 
   def show_total_employees(total_employees):    
     print(f'{Employee.total_employees}')
-
-
