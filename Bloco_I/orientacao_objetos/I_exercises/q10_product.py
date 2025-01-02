@@ -62,3 +62,14 @@ class Store:
     for linha in self.products:
         linha_formatada = "".join([f"{str(linha[i]).ljust(largura_colunas[i] + 2)}" for i in range(len(linha))])
         print(linha_formatada)
+
+produto1 = Product('Arroz', 5.99, 20)
+produto2 = Product('Feijão', 8.99, 10)
+produto3 = Product("Café", 10, 20)
+
+# print(produto1.show_info())
+# print(produto2.show_info())
+# print(produto3.show_info())
+
+produtos = Store()
+produtos.list_products()
