@@ -10,3 +10,4 @@
 # shuffle() : Embaralha as cartas. Caso o baralho esteja vazio, lance uma exceção EmptyDeckError .
 # deal_card() : Remove a carta do topo do baralho e a retorna. Caso o baralho esteja vazio, lance uma exceção EmptyDeckError .
 # remaining_cards() : Mostra quantas cartas ainda estão no baralho.
+
