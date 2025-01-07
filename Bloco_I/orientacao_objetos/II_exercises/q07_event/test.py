@@ -8,5 +8,8 @@ confra = Event('Mariana', '15/01/2027', '22:00', 'Faustino')
 niver = Event('Lucy', '15/01/2027', '22:00', 'Faustino')
 
 agenda = Agenda()
+agenda.add_event('anny', '15/01/2027', '02:00', 'Faustino')
+agenda.remove_event('anny')
+
 agenda.list_events('15/01/2027')
 
