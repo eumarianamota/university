@@ -11,28 +11,43 @@ class TaskManager:
         self.tasks = []
 
     def add_task(self, task):
-        for task in self.tasks:
-            if Task.name == task:
-                raise TaskAlreadyExistsError('ja existe')
-            print(task)
-
-
-
+        for k in self.tasks:
+            if task == k:
+                raise TaskAlreadyExistsError('This task already exist')
+        self.tasks.append(task)
+    
     def remove_task(self, name):
         for task in self.tasks:
-            if Task.name == name:
-                self.tasks.remove(task)
-                return 
+            if task.name == name:
+                return self.tasks.remove(task)
         raise TaskNotFoundError("Task doesn't exist")
-
-
-
-clean = Task('Clean the house', 'Clean the bedroom', 'Medium')
-dishes = Task('Wash the dishes', 'Wash all the dishes from dinner', 'High')
-
-tasks = TaskManager()
-tasks.add_task(clean)
-tasks.add_task(dishes)
-tasks.add_task(dishes)
+    
+    def list_tasks(self, priority=None):
+        if priority == None:
+            print('ALL THE TASKS')
+            for task in self.tasks:
+                print(task)
+                print('_'*50)
+        elif priority == 'Low':
+            print('TASKS WITH LOW PRIORITY')
+            print('_'*50)
+            for task in self.tasks:
+                if task.priority == 'Low':
+                    print(task)
+                    print('_'*50)
+        elif priority == 'Medium':
+            print('TASKS WITH MEDIUM PRIORITY')
+            print('_'*50)
+            for task in self.tasks:
+                if task.priority == 'Medium':
+                    print(task)
+                    print('_'*50)
+        elif priority == 'High':
+            print('TASKS WITH HIGH PRIORITY')
+            print('_'*50)
+            for task in self.tasks:
+                if task.priority == 'High':
+                    print(task)
+                    print('_'*50)
 
 
